@@ -22,6 +22,5 @@ from cinema_api import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/v1/",
-        include("app.urls", namespace="app"))
+    path("api/v1/", include("app.urls", namespace="app")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
