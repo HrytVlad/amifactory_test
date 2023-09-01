@@ -18,7 +18,6 @@ class MovieDetailView(View):
 
     def get(self, request, pk, *args, **kwargs):
         try:
-            result = 1 / 0
             movie = Movie.objects.get(pk=pk)
             movie_dict = get_movie_response(movie)
             return JsonResponse(movie_dict, safe=False, status=200)
