@@ -14,7 +14,7 @@ services:
               python manage.py loaddata app/fixtures/genre.json &&
               python manage.py loaddata app/fixtures/person.json &&
               python manage.py loaddata app/fixtures/movie.json &&
-              python manage.py runserver 0.0.0.0:8000"
+              python manage.py runserver --insecure 0.0.0.0:8000"
     env_file:
       - .env
     depends_on:
