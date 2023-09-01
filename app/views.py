@@ -29,7 +29,7 @@ class MoviesListView(View):
     def get(self, request, *args, **kwargs):
         genre_id = request.GET.get("genre")
         src = request.GET.get("src")
-        page = request.GET.get("page")
+        page = request.GET.get("page") or 0
 
         validation_result = movie_list_validator(genre_id, src, page)
         if validation_result:
